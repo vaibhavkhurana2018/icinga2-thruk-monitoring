@@ -2,12 +2,12 @@ version: '3'
 services:
     sentinel1: 
         hostname: sentinel1
-        image: vaibhav93/monitoring_icinga2
+        image: vaibhav93/monitoring_icinga2:v1
         networks:
             - test_monitoring
     thruk: 
         hostname: thruk
-        image: vaibhav93/monitoring_thruk
+        image: vaibhav93/monitoring_thruk:v1
         networks:
             - test_monitoring
         ports: 
