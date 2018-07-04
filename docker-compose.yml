@@ -1,0 +1,17 @@
+version: '3'
+services:
+    sentinel1: 
+        hostname: sentinel1
+        image: vaibhav93/monitoring_icinga2
+        networks:
+            - test_monitoring
+    thruk: 
+        hostname: thruk
+        image: vaibhav93/monitoring_thruk
+        networks:
+            - test_monitoring
+        ports: 
+            - "80:80"
+networks:
+    test_monitoring:
+        driver: "bridge"

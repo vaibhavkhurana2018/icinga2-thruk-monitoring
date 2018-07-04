@@ -1,0 +1,14 @@
+Usage: 
+    change to the cloned directory and run :
+        docker-compose up
+    
+Description: 
+    Monitoring infrastructure test setup using icinga2 and thruk. This will start a test infra using docker. 
+
+Requirements: 
+    1. docker
+    2. docker-compose
+
+Thruk Dashboard: 
+    Thruk dashboard will be available on http://localhost/thruk after running the docker compose command. 
+
