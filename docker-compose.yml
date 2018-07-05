@@ -5,6 +5,8 @@ services:
         image: vaibhav93/monitoring_icinga2:v1
         networks:
             - test_monitoring
+        volumes:
+            - ./etc/icinga2/objects/:/etc/icinga2/conf.d/objects
     thruk: 
         hostname: thruk
         image: vaibhav93/monitoring_thruk:v1
@@ -12,6 +14,14 @@ services:
             - test_monitoring
         ports: 
             - "80:80"
+    client:
+        hostname: client
+        image: centos:7
+        networks: 
+            - test_monitoring
+        entrypoint:
+            - /bin/bash
+        stdin_open: true
 networks:
     test_monitoring:
         driver: "bridge"

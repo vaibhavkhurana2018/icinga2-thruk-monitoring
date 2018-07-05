@@ -2,6 +2,10 @@ Usage:
     change to the cloned directory and run :
         docker-compose up
     
+    Add the host and services config files under the host and services dir for any monitoring any additional host. If any changes are made to the config files, once the app is up then run the following command to reflect the changes:
+
+        docker-compose restart sentinel1
+
 Description: 
     Monitoring infrastructure test setup using icinga2 and thruk. This will start a test infra using docker. 
 
